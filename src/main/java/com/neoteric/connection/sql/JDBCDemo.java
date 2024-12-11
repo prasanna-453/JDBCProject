@@ -1,4 +1,4 @@
-package com.neoteric.statement;
+package com.neoteric.connection.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -25,7 +25,9 @@ public class JDBCDemo {
 
 
             String name = rs.getString("empName");
-            System.out.println(name);
+
+               int id = rs.getInt("empId");
+            System.out.println(name+ "    "+id);
         }
         st.close();
         con.close();
